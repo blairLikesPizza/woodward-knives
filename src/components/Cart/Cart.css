@@ -1,0 +1,10 @@
+.cart_main_container button {
+    height: 55px;
+    width: 200px;
+    background: #48ABE8;
+    border-radius: 6px;
+    border: 1px solid black;
+    font-family: 'Montserrat', sans-serif; 
+    font-size: 19px;
+    color: white;
+}
