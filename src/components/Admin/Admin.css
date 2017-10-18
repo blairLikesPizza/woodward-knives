@@ -1,0 +1,30 @@
+.admin_main_container {
+    display: flex;
+    flex-direction: row;
+    background: lightcyan;
+    
+}
+
+.add_product_container {
+    width: 550px;
+    height: 700px;
+    background: white;
+    border: 1px solid black;
+    margin: 20px;
+}
+
+.admin_loggedin_container {
+    height: 250px;
+    width: 500px;
+    background: white;
+    border: 1px solid black;
+    margin: 20px;
+}
+
+.orders_container {
+    width: 550px;
+    height: 700px;
+    background: white;
+    border: 1px solid black;
+    margin: 20px;
+}

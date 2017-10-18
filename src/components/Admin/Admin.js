@@ -5,8 +5,14 @@ class Admin extends Component{
     render(){
         return(
             <div className="admin_main_container">
-               <div className="admin_background_container">
-                   
+                <div className="admin_loggedin_container">
+
+                </div>
+                <div className="orders_container">
+
+                </div>
+               <div className="add_product_container">
+                    <button>Add Product</button>
                </div>
             </div>
         )

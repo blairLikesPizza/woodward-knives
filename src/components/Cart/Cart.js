@@ -3,11 +3,24 @@ import './Cart.css';
 import { Link } from 'react-router-dom';
 
 class Cart extends Component{
+  constructor(props) {
+        super(props);
+
+        this.state = {
+            cart: []
+        }
+    }
     render(){
         return(
             <div className="cart_main_container">
-                <h1>Cart Page</h1>
-                <Link to="/checkout"><button>Checkout</button></Link>
+                <div className="items_in_cart_container">
+
+                </div>
+                <div className="stripe_checkout_button_container">
+                    <div className="checkout_button">
+                       <Link to="/checkout"><button>Checkout</button></Link>
+                    </div>
+                </div>
             </div>
         )
     }

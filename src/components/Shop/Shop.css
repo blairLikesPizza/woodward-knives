@@ -1,7 +1,67 @@
+.root_shop {
+    background-image: url(https://images.unsplash.com/photo-1494170959219-cc4354bcc818?dpr=1&auto=compress,format&fit=crop&w=1650&h=&q=80&cs=tinysrgb&crop=);
+    background-attachment: fixed;
+
+}
+
 .main_shop_container {
     display: flex;
-    height: 100vh;
     width: 100%;
-    background-image: url(https://images.unsplash.com/photo-1459552431286-ab62f22b5121?dpr=1&auto=compress,format&fit=crop&w=1650&h=&q=80&cs=tinysrgb&crop=)
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
 }
+
+
+.shop_header {
+    padding-top: 40px;
+    font-size: 70px;
+    color: white;
+    font-family: 'Lobster', cursive;
+}
+
+.knife_tile {
+    display: flex;
+    height: 400px;
+    width: 1200px;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    margin: 80px;
+    background: #2E2E30;;
+    border-radius: 10px;
+}
+
+.knife_tile img {
+    height: 300px;
+    margin: 0px;
+    border-radius: 5px;
+}
+
+.knife_description {
+    width: 400px;
+    margin-top: -40px;
+}
+
+.knife_title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 30px;
+    
+}
+
+.add_button {
+    height: 40px;
+    width: 130px;
+    background: #F8D158;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    border: none;
+}
+
+.add_button:hover {
+    background: #FEC503;
+}
+
+
 

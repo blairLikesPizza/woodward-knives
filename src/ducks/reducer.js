@@ -2,6 +2,7 @@ import axios from 'axios';
 
 const initialState = {
     user: {},
+    knives: [],
     username: '',
     password: '',
     firstName: '',
@@ -15,31 +16,25 @@ const initialState = {
     addressThree: ''
 }
 
-const GET_USER_INFO = "GET_USER_INFO";
-const UPDATE_USERNAME = "UPDATE_USERNAME";
-const UPDATE_PASSWORD = "UPDATE_PASSWORD";
-const UPDATE_FIRST_NAME = "UPDATE_FIRST_NAME";
-const UPDATE_LAST_NAME = "UPDATE_LAST_NAME";
-const UPDATE_EMAIL = "UPDATE_EMAIL";
-const UPDATE_PRICE = "UPDATE_PRICE";
-const UPDATE_PRODUCT_IMAGE = "UPDATE_PRODUCT_IMAGE";
-const UPDATE_USER_IMAGE = "UPDATE_USER_IMAGE";
-const UPDATE_ADDRESS_ONE = "UPDATE_ADDRESS_ONE";
-const UPDATE_ADDRESS_TWO = "UPDATE_ADDRESS_TWO";
-const UPDATE_ADDRESS_THREE = "UPDATE_ADDRESS_THREE";
+// ACTION CREATORS
 
+const GET_USER_INFO        = "GET_USER_INFO";
+const GET_KNIVES           = "GET_KNIVES";
 
+// REDUCER FUNCTION
 
-export default function reducer(state = initialState, action) {          //setting state = initialState just makes it so that if state is  
+export default function reducer(state = initialState, action){          //setting state = initialState just makes it so that if state is  
     switch (action.type) {
         case GET_USER_INFO + '_FULFILLED':
          return Object.assign({}, state, { user: action.payload })
-
+        case GET_KNIVES + '_FULFILLED':
+         return Object.assign({}, state, { knives: action.payload })
         default:
             return state;
     }                                                    //which only matters the first time it's booted up
 }   
 
+// ACTION CREATORS
 
 export function getUserInfo() {
     const userData = axios.get('/auth/me')
@@ -49,5 +44,16 @@ export function getUserInfo() {
     return {
         type: GET_USER_INFO,
         payload: userData
+    }
+}
+
+export function getKnives(){
+   const knivesData = axios.get('/api/knives')
+        .then(res => {
+            return res.data
+        })
+    return {
+        type: GET_KNIVES,
+        payload: knivesData
     }
 }
